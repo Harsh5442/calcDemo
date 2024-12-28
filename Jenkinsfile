@@ -19,7 +19,7 @@ stages{
   }
   stage('SonarQube Analysis'){
     steps{
-      withSonarWubeEnv('sonarqube'){
+      withSonarQubeEnv('sonarqube'){
         bat"""
         mvn clean verify sonar:sonar \
         -Dsonar.projectKey=sonarmaven2 \
